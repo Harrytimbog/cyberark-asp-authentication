@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using CyberArk.AAM.NetStandardPasswordSDK;
+using CyberArk.AAM.NetStandardPasswordSDK.Exceptions;
+
 
 namespace cyberark_asp_authentication.Controllers
 {

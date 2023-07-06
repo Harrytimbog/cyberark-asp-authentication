@@ -15,6 +15,8 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using GetPassword;
+using CyberArk.AIM.NetPasswordSDK.Exceptions;
 
 namespace cyberark_asp_authentication.Areas.Identity.Pages.Account
 {
@@ -89,7 +91,16 @@ namespace cyberark_asp_authentication.Areas.Identity.Pages.Account
         {
             if (User.Identity.IsAuthenticated) 
             {
-                Response.Redirect("/");
+                try
+                {
+                    GetRef getPassword = new GetRef();
+                    getPassword.Variablex();
+                    Response.Redirect("/");
+                }
+                catch (PSDKException ex)
+                {
+                    Label2.Text = (ex.Reason);
+                }
             }
             if (!string.IsNullOrEmpty(ErrorMessage))
             {
