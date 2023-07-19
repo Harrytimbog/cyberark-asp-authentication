@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace cyberark_asp_authentication.Data;
+namespace cyberark_asp_authentication.Areas.Identity.Data;
 
 public class AuthDbContext : IdentityDbContext<ApplicationUser>
 {

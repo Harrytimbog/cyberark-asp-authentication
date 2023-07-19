@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using cyberark_asp_authentication.Data;
 using cyberark_asp_authentication.Areas.Identity.Data;
 
 var builder = WebApplication.CreateBuilder(args);

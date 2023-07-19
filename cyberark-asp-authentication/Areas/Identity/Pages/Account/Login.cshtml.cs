@@ -93,13 +93,13 @@ namespace cyberark_asp_authentication.Areas.Identity.Pages.Account
             {
                 try
                 {
-                    GetRef getPassword = new GetRef();
-                    getPassword.Variablex();
+                    //GetRef getPassword = new GetRef();
+                    //getPassword.Variablex();
                     Response.Redirect("/");
                 }
                 catch (PSDKException ex)
                 {
-                    Label2.Text = (ex.Reason);
+                    //Label2.Text = (ex.Reason);
                 }
             }
             if (!string.IsNullOrEmpty(ErrorMessage))
